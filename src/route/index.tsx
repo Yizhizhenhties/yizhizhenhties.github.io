@@ -2,7 +2,7 @@ import MainPage from "@/pages/_index";
 import HomePage from "@/pages/homePage/_index";
 import MainContentLayout from "@/pages/layout/_index";
 import Intro from "@/pages/layout/intro/_index";
-import { type RouteObject, createBrowserRouter } from "react-router-dom";
+import { type RouteObject, createHashRouter } from "react-router-dom";
 
 const routes: RouteObject[] = [
     {
@@ -29,4 +29,4 @@ const routes: RouteObject[] = [
         ]
     }
 ]
-export const router = createBrowserRouter(routes)
+export const router = createHashRouter(routes)
