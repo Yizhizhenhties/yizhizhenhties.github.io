@@ -1,1 +1,0 @@
-import{j as r}from"./index-wp8xvGkf.js";import{E as o}from"./index-Dyik0_eb.js";function e(){return r.jsx("div",{className:"p-4",children:"intro"})}function i(){return r.jsx(o,{})}export{e as Component,i as ErrorBoundary};
