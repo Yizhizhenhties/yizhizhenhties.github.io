@@ -1,1 +1,0 @@
-import{a as n,j as r,B as t}from"./index-DAnyVh5-.js";import{E as e}from"./index-Dg2Faix-.js";function i(){const o=n();return r.jsxs("div",{className:"p-4",children:[r.jsx("div",{children:"这是 HomePage"}),r.jsx(t,{onClick:()=>o("/intro"),children:"Go"})]})}function c(){return r.jsx(e,{})}export{i as Component,c as ErrorBoundary};
