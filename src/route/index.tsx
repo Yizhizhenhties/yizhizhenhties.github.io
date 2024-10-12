@@ -2,9 +2,9 @@ import MainPage from "@/pages/_index";
 import HomePage from "@/pages/homePage/_index";
 import MainContentLayout from "@/pages/layout/_index";
 import Intro from "@/pages/layout/intro/_index";
-import Tool1 from "@/pages/layout/tools/tool1";
+import Calculate from "@/pages/layout/tools/calculate";
 import Tool2 from "@/pages/layout/tools/tool2";
-import { InfoCircleOutlined, ToolOutlined } from "@ant-design/icons";
+import { CalculatorOutlined, InfoCircleOutlined, ToolOutlined } from "@ant-design/icons";
 import { Navigate, type RouteObject, createHashRouter } from "react-router-dom";
 
 const toolsPrefix = '/tools';
@@ -13,6 +13,7 @@ const getMenuInfo = (key: string, label: string, icon?: any) => ({
     label: label,
     icon: icon
 })
+export const menuDefaultOpenKeys = ['/tools']
 export const ContentRoute = [
     {
         id: '/intro',
@@ -27,13 +28,13 @@ export const ContentRoute = [
         children: [
             {
                 path: `${toolsPrefix}`,
-                element: <Navigate to={`${toolsPrefix}/tool1`} replace />,
+                element: <Navigate to={`${toolsPrefix}/calculate`} replace />,
             },
             {
-                id: `${toolsPrefix}/tool1`,
-                path: `${toolsPrefix}/tool1`,
-                element: <Tool1/>,
-                ...getMenuInfo(`${toolsPrefix}/tool1`, '工具1', <ToolOutlined />)
+                id: `${toolsPrefix}/calculate`,
+                path: `${toolsPrefix}/calculate`,
+                element: <Calculate/>,
+                ...getMenuInfo(`${toolsPrefix}/calculate`, '数学表达式计算', <CalculatorOutlined />)
             },
             {
                 id: `${toolsPrefix}/tool2`,

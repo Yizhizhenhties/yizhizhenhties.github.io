@@ -1,4 +1,4 @@
-import { ContentRoute } from "@/route";
+import { ContentRoute, menuDefaultOpenKeys } from "@/route";
 import { Layout, Menu } from "antd";
 import { Outlet, useMatches, useNavigate } from "react-router";
 
@@ -25,14 +25,16 @@ export default function MainContentLayout() {
     return (
         <Layout className="w-full h-full">
             <Layout.Sider theme="light" className="shadow-xl" collapsible>
-                <Menu 
+                <Menu
                     onSelect={(info) =>
                         navigate(info.key)
-                    } 
-                    mode="inline" 
+                    }
+                    defaultOpenKeys={menuDefaultOpenKeys}
+                    inlineIndent={12}
+                    mode="inline"
                     selectedKeys={[routeId]} 
                     items={mapRouteToMenu(ContentRoute)}
-                    className="p-2"
+                    className="py-2"
                 />
             </Layout.Sider>
             <Layout.Content>
