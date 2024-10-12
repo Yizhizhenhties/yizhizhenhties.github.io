@@ -27,7 +27,7 @@ export default function MainPage() {
                         <span 
                             className="ml-8 text-xl font-semibold hover:text-blue-500 cursor-pointer"
                             onClick={() => navigate('/')}>
-                            zhenhDoc
+                            Yizhizhenhties
                         </span>
                     </div>
                     <Space>

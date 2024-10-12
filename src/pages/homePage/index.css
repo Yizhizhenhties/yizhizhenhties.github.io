@@ -1,0 +1,26 @@
+.homepage-bg {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    font-size: 30xp;
+    height: 100%;
+    width: 100%;  
+    background-image: linear-gradient(125deg, #8ef3de, #76bae8, #e58277, #e8b8fb, #f9d396);  
+    color: #fff;  
+    background-size: 400%;  
+    animation: bgmove 20s infinite;  
+}  
+
+@keyframes bgmove {  
+    0% {  
+        background-position: 0% 50%;  
+    }  
+
+    50% {  
+        background-position: 100% 50%;  
+    }  
+
+    0% {  
+        background-position: 0% 50%;  
+    }  
+}  
