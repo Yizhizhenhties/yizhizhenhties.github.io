@@ -4,7 +4,8 @@ import MainContentLayout from "@/pages/layout/_index";
 import Intro from "@/pages/layout/intro/_index";
 import Calculate from "@/pages/layout/tools/calculate";
 import Drawio from "@/pages/layout/tools/drawio";
-import { CalculatorOutlined, InfoCircleOutlined, PartitionOutlined, ToolOutlined } from "@ant-design/icons";
+import EzGif from "@/pages/layout/tools/ezgif";
+import { CalculatorOutlined, InfoCircleOutlined, PartitionOutlined, ToolOutlined, VideoCameraOutlined } from "@ant-design/icons";
 import { Navigate, type RouteObject, createHashRouter } from "react-router-dom";
 
 const toolsPrefix = '/tools';
@@ -41,6 +42,12 @@ export const ContentRoute = [
                 path: `${toolsPrefix}/drawio`,
                 element: <Drawio/>,
                 ...getMenuInfo(`${toolsPrefix}/drawio`, 'DrawIo（记得保存）', <PartitionOutlined />)
+            },
+            {
+                id: `${toolsPrefix}/ezgif`,
+                path: `${toolsPrefix}/ezgif`,
+                element: <EzGif/>,
+                ...getMenuInfo(`${toolsPrefix}/ezgif`, 'EzGif', <VideoCameraOutlined />)
             }
         ],
     }
