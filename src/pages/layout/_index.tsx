@@ -1,8 +1,6 @@
 import { ContentRoute, menuDefaultOpenKeys } from "@/route";
 import { Layout, Menu } from "antd";
-import KeepAlive from "keepalive-for-react";
-import { useMemo } from "react";
-import { useLocation, useMatches, useNavigate, useOutlet } from "react-router";
+import { Outlet, useMatches, useNavigate } from "react-router";
 
 const mapRouteToMenu = (routes: any) => {
     return routes.map((it: any) => {
@@ -15,21 +13,6 @@ const mapRouteToMenu = (routes: any) => {
             ...children
         }
     })
-}
-
-function BasicLayoutWithCache() {
-    const outlet = useOutlet();
-    const location = useLocation();
-
-    const cacheKey = useMemo(() => {
-        return location.pathname + location.search;
-    }, [location]);
-
-    return (
-        <KeepAlive activeName={cacheKey} max={10} strategy={'LRU'}>
-            {outlet}
-        </KeepAlive>
-    )
 }
 
 export default function MainContentLayout() {
@@ -55,7 +38,7 @@ export default function MainContentLayout() {
                 />
             </Layout.Sider>
             <Layout.Content>
-                <BasicLayoutWithCache />
+                <Outlet />
             </Layout.Content>
         </Layout>
     )
