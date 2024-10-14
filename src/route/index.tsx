@@ -3,8 +3,8 @@ import HomePage from "@/pages/homePage/_index";
 import MainContentLayout from "@/pages/layout/_index";
 import Intro from "@/pages/layout/intro/_index";
 import Calculate from "@/pages/layout/tools/calculate";
-import Tool2 from "@/pages/layout/tools/tool2";
-import { CalculatorOutlined, InfoCircleOutlined, ToolOutlined } from "@ant-design/icons";
+import Drawio from "@/pages/layout/tools/drawio";
+import { CalculatorOutlined, InfoCircleOutlined, PartitionOutlined, ToolOutlined } from "@ant-design/icons";
 import { Navigate, type RouteObject, createHashRouter } from "react-router-dom";
 
 const toolsPrefix = '/tools';
@@ -37,10 +37,10 @@ export const ContentRoute = [
                 ...getMenuInfo(`${toolsPrefix}/calculate`, '数学表达式计算', <CalculatorOutlined />)
             },
             {
-                id: `${toolsPrefix}/tool2`,
-                path: `${toolsPrefix}/tool2`,
-                element: <Tool2/>,
-                ...getMenuInfo(`${toolsPrefix}/tool2`, '工具2', <ToolOutlined />)
+                id: `${toolsPrefix}/drawio`,
+                path: `${toolsPrefix}/drawio`,
+                element: <Drawio/>,
+                ...getMenuInfo(`${toolsPrefix}/drawio`, 'DrawIo（记得保存）', <PartitionOutlined />)
             }
         ],
     }
